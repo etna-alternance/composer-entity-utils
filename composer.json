@@ -31,7 +31,6 @@
     "autoload": {
         "psr-4": {
             "ETNA\\": "src",
-            "TestEntityUtils\\": "app",
             "TestContext\\": "Tests/Functional/Context"
         }
     },

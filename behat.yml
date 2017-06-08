@@ -24,13 +24,12 @@ ci:
                 - ETNA\FeatureContext\CoverageContext:
                     coverage_path: /tmp/behat/coverage
                     whitelist:
-                        - app
+                        - src
                     blacklist:
                         - vendor
                         - bin
                         - tmp
                         - Tests
-                - ETNA\FeatureContext\RabbitContext
                 - ETNA\FeatureContext\MainContext
                 - TestContext\FeatureContext
 wip:

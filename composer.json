@@ -1,0 +1,56 @@
+{
+    "name": "etna/entity-utils",
+    "description": "Paquet composer contenant des fonctions utiles pour les entités",
+    "keywords": ["utils", "silex", "composer"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ETNA",
+            "email": "dev@etna-alternance.net",
+            "homepage": "http://etna-alternance.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "behat/behat": "3.x",
+        "fzaninotto/faker": "~1.0",
+
+        "phpunit/phpunit": "~4.0",
+        "sebastian/phpcpd": "~2.0",
+        "squizlabs/php_codesniffer": "dev-master",
+        "phpmd/phpmd": "~2.0",
+        "pdepend/pdepend": "~2.0",
+        "phploc/phploc": "2.x",
+        "satooshi/php-coveralls": "dev-master",
+        "phing/phing":"*@stable",
+
+        "etna/composer-behat-utils": "2.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "ETNA\\": "src",
+            "TestContext\\": "Tests/Functional/Context"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "mkdir -p tmp/behat && chmod 777 tmp/behat",
+        "post-update-cmd": "mkdir -p tmp/behat && chmod 777 tmp/behat",
+        "test": "behat",
+        "behat": "behat",
+        "phing": "phing",
+        "coveralls": "coveralls"
+    },
+    "repositories": [
+       {
+           "type": "composer",
+           "url": "https://blu-composer.herokuapp.com"
+       }
+   ]
+}
